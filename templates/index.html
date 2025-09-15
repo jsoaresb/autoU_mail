@@ -1,60 +1,58 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Classificador de E-mail com IA</title>
-    <!-- Inclui o Bootstrap para um design moderno e responsivo -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Link para o seu arquivo de estilo separado -->
-    <link rel="stylesheet" href="{{ url_for('static', filename='app.css') }}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classificador de E-mails com IA</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='app.css') }}">
 </head>
 <body>
 
-    <div class="d-flex flex-column align-items-center mb-4">
-        <img src="/static/mailsense_logo.png" alt="Logo MailSense" class="img-fluid logo-mailsense">
-    </div>
+    <div class="d-flex flex-column align-items-center mb-4">
+        <img src="/static/mailsense_logo.png" alt="Logo MailSense" class="img-fluid logo-mailsense">
+    </div>
 
-    <main class="container">
-        <h1 class="text-center mb-4">Classificador de E-mail com IA</h1>
-        <!-- Container principal que alinha os dois elementos lado a lado -->
-        <div class="d-flex justify-content-center align-items-start gap-4 flex-wrap">
-            <section class="form-container col-md-7">
-                <form id="emailForm" enctype="multipart/form-data">
-                    <div class="mb-3">
-                        <label for="email_text" class="form-label">Cole o conteúdo do email aqui:</label>
-                        <textarea class="form-control" id="email_text" name="email_text" rows="8" placeholder="Assunto: Dúvida sobre o sistema..."></textarea>
-                    </div>
-                    <div class="mb-3">
-                        <label for="email_file" class="form-label">Ou faça o upload de um arquivo (.txt) ou PDF:</label>
-                        <input class="form-control" type="file" id="email_file" name="email_file" accept=".txt,.pdf">
-                    </div>
-                    <button type="submit" class="btn btn-primary w-100">Processar Email</button>
-                </form>
-            </section>
+    <main class="container">
+        <h1 class="text-center mb-4">Classificador de E-mail com</h1>
+       
+        <div class="d-flex justify-content-center align-items-start gap-4 flex-wrap">
+            <section class="form-container col-md-7">
+                <form id="emailForm" enctype="multipart/form-data">
+                    <div class="mb-3">
+                        <label for="email_text" class="form-label">Cole o conteúdo do e-mail aqui:</label>
+                        <textarea class="form-control" id="email_text" name="email_text" rows="8" placeholder="Assunto: Dúvida sobre o sistema..."></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email_file" class="form-label">Ou faça o upload de um arquivo (.txt) ou PDF:</label>
+                        <input class="form-control" type="file" id="email_file" name="email_file" accept=".txt,.pdf">
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">Processar E-mail</button>
+                </form>
+            </section>
 
-            <section id="results-section" class="results-container col-md-5 hidden">
-                <h2 class="text-center mb-3">Resultado</h2>
-                <div id="loading" class="text-center">
-                    <div class="spinner-border text-primary" role="status">
-                        <span class="visually-hidden">Processando...</span>
-                    </div>
-                    <p class="mt-2">Processando, por favor aguarde...</p>
-                </div>
-                <div id="result-box" class="alert alert-info" role="alert">
-                    <p><strong>Categoria:</strong> <span id="categoria_resultado"></span></p>
-                    <p><strong>Resposta Sugerida:</strong></p>
-                    <p id="resposta_sugerida" class="lead"></p>
-                </div>
-            </section>
-        </div>
-        
-        <!-- Adiciona o botão "Voltar" -->
-        <div class="text-center mt-4">
-            <a href="{{ url_for('home') }}" class="btn btn-secondary">Voltar</a>
-        </div>
-    </main>
+            <section id="results-section" class="results-container col-md-5 hidden">
+                <h2 class="text-center mb-3">Resultado</h2>
+                <div id="loading" class="text-center">
+                    <div class="spinner-border text-primary" role="status">
+                        <span class="visually-hidden">Processando...</span>
+                    </div>
+                    <p class="mt-2">Processando, por favor aguarde...</p>
+                </div>
+                <div id="result-box" class="alert alert-info" role="alert">
+                    <p><strong>Categoria:</strong> <span id="categoria_resultado"></span></p>
+                    <p><strong>Resposta Sugerida:</strong></p>
+                    <p id="resposta_sugerida" class="lead"></p>
+                </div>
+            </section>
+        </div>
+        
+        <!-- Adicionei o botão "Voltar" -->
+        <div class="text-center mt-4">
+            <a href="{{ url_for('home') }}" class="btn btn-secondary">Voltar</a>
+        </div>
+    </main>
 
-    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
 </html>

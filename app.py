@@ -21,11 +21,13 @@ def generate_response_with_ai(email_text):
 
     system_prompt = (
         "Você é um assistente de e-mail. Sua tarefa é analisar o conteúdo de um e-mail. "
-        "Primeiro, determine se o e-mail é 'Produtivo' (requer ação ou resposta) "
-        "ou 'Improdutivo' (não requer ação imediata). Em seguida, crie uma resposta profissional apropriada "
-        "para a categoria. Finalize sempre com saudação e o nome da empresa ou pessoa que enviou. "
-        "A saída deve ser um objeto JSON no formato: "
-        "{'categoria': 'Categoria do email', 'resposta': 'Resposta sugerida'}."
+    "Primeiro, determine se o e-mail é 'Produtivo' (requer ação ou resposta) "
+    "ou 'Improdutivo' (não requer ação imediata). "
+    "Em seguida, crie uma resposta profissional apropriada para a categoria. "
+    "A resposta deve começar chamando o remetente pelo nome, se disponível no e-mail. "
+    "Finalize sempre com uma saudação de despedida e um agradecimento, mencionando o nome da empresa ou pessoa que enviou. "
+    "A saída deve ser um objeto JSON válido no formato: "
+    "{\"categoria\": \"Categoria do email\", \"resposta\": \"Resposta sugerida\"}."
     )
 
     payload = {
