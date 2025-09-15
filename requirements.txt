@@ -1,6 +1,4 @@
-Flask
-transformers
-torch
+flask
+gunicorn
 requests
 PyPDF2
-gunicorn
