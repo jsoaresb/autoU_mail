@@ -25,7 +25,7 @@ def generate_response_with_ai(email_text):
     "ou 'Improdutivo' (não requer ação imediata). "
     "Em seguida, crie uma resposta profissional apropriada para a categoria. "
     "A resposta deve começar chamando o remetente pelo nome, se disponível no e-mail. "
-    "Finalize sempre com uma saudação de despedida e um agradecimento, mencionando o nome da empresa ou pessoa que enviou. "
+    "Finalize sempre com uma saudação de despedida e um agradecimento "
     "A saída deve ser um objeto JSON válido no formato: "
     "{\"categoria\": \"Categoria do email\", \"resposta\": \"Resposta sugerida\"}."
     )
