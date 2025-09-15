@@ -53,4 +53,54 @@ Deploy
 Render
  → hospedagem online gratuita
 
+Estrutura do projeto
+
+app.py
+templates/
+static/
+requirements.txt
+examples/
+.env.example
+README.md
+
+
+---
+
+## ⚙️ Como rodar localmente
+
+### 1. Clone o repositório
+```bash
+git clone https://github.com/seu-usuario/projeto_autou.git
+cd projeto_autou
+
+#crie e ative um ambiente virtual
+
+python -m venv venv
+venv\Scripts\activate   # Windows
+source venv/bin/activate  # Linux/Mac
+
+Instale as Dependencias
+pip install -r requirements.txt
+
+Agora, crie um arquivo .env na raiz do projeto
+GEMINI_API_KEY=coloque_a_chave_aqui
+
+Rode a aplicação
+python app.py
+
+Acesse
+Acesse em: http://127.0.0.1:5000
+
+A APLICAÇÃO TAMBÉM ESTÁ DISPONIVEL EM
+https://autou-mail.onrender.com
+
+
+
+
+
+
+
+
+
+
 
