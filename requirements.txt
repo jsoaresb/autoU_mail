@@ -1,0 +1,6 @@
+Flask
+transformers
+torch
+requests
+PyPDF2
+gunicorn
