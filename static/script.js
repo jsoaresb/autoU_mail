@@ -27,10 +27,11 @@ document.getElementById('emailForm').addEventListener('submit', async function(e
     }
 
     try {
-        const response = await fetch('/processar', {
-            method: 'POST',
-            body: formData
-        });
+        const response = await fetch('https://autou-mail.onrender.com/processar', {
+    method: 'POST',
+    body: formData
+});
+
         const result = await response.json();
 
         if (response.ok) {
